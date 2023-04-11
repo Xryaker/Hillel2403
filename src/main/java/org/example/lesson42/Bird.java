@@ -15,4 +15,9 @@ public class Bird extends Animal{
     public void fly() {
         System.out.println(isFly ? "I "+getName()+" can fly" : "I "+getName()+" can not fly");
     }
+
+    @Override
+    public int getSumDays() {
+        return getAge()*365*4;
+    }
 }

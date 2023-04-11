@@ -2,8 +2,8 @@ package org.example.lesson42;
 
 public class lesson42 {
     public static void main(String[] args) {
-        Animal animal=new Animal("Sharik",5);
-        animal.printName();
+//        Animal animal=new Animal("Sharik",5);
+//        animal.printName();
         Bird bird=new Bird("Villy",5,false,"green");
         bird.printName();
         bird.fly();

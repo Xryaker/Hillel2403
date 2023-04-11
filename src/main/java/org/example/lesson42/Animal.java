@@ -1,6 +1,10 @@
 package org.example.lesson42;
 
-public class Animal {
+public  abstract class Animal {
+    public int getAge() {
+        return age;
+    }
+
     public String getName() {
         return name;
     }
@@ -18,4 +22,6 @@ public class Animal {
     public void printName(){
         System.out.println(this.name);
     }
+    public  abstract int getSumDays();
+
 }

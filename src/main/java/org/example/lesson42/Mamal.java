@@ -26,4 +26,18 @@ public class Mamal extends  Animal{
     public void move(){
         System.out.println("I can move");
     }
+    @Override
+    public void printName() {
+        System.out.println("I am a mamal, my name is "+getName());
+    }
+
+    @Override
+    public int getSumDays() {
+        return getAge()*365*2;
+    }
+
+    @Override
+    public String toString() {
+        return "Predator = "+predator+"\nColor = "+color+"\nSpeed = "+speed+"\nName = "+getName();
+    }
 }
