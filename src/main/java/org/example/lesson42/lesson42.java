@@ -11,7 +11,7 @@ public class lesson42 {
         mamal.printName();
         Tiger tiger=new Tiger("Tiger",6,true,"red",70,"Igor");
         System.out.println(tiger.getMasterName());
-
+        Animal animal=new Tiger();
 
     }
 

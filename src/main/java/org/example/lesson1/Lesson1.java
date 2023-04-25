@@ -1,27 +1,35 @@
 package org.example.lesson1;
 
+import java.util.LinkedHashSet;
+import java.util.List;
+
 public class Lesson1 {
     public static void main(String[] args) {
-        int age=98,data=2023,number;
-        age=17;
-        String string;
-        string="Vasiliy Shevchenko";
-        System.out.println(age);
-        char p='\u0007';
-        System.out.println(string+p+age);
 
-        String str="Shevchenko"+age;
-        System.out.println(str);
-        boolean bool=true;
-        byte b=123;
-        long l= 185669L;
-        double d=18.23;
-        int i;
-        i= (int) l;
-        b=(byte)d;
-        System.out.println(i);
-        char c='a';
+        testMethod("gfd, gfd, fkfm");
+    }
 
+    public static String testMethod(String str) {
+
+        String[] splitStr = str
+                .split(", |\\.");
+
+        LinkedHashSet<String> uniqueStr = new LinkedHashSet<>(List.of(splitStr));
+        char[] arrStr = uniqueStr.toString().toCharArray();
+        for (int i = 1; i < arrStr.length; i++) {
+            if (arrStr[i - 1] == ' ' && arrStr[i] != ' ')
+                arrStr[i] = Character.toUpperCase(arrStr[i]);
+        }
+        if (arrStr[0] != ' ')
+            arrStr[0] = Character.toUpperCase(arrStr[0]);
+
+        String stringStr = new String(arrStr)
+                .replace(", ", "\n")
+                .replaceAll("\\p{Punct}", "")
+                .replace(String.valueOf(arrStr[1]), String.valueOf(arrStr[1]).toUpperCase());
+        System.out.println("****Your list:****");
+        System.out.println(stringStr);
+        return stringStr;
     }
     //   ||||||||||||||||            ||||||||||||||||||||||||||
 }
